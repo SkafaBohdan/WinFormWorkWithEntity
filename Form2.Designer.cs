@@ -170,7 +170,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 385);
+            this.ClientSize = new System.Drawing.Size(320, 397);
             this.Controls.Add(this.CountDoors);
             this.Controls.Add(this.labelCount);
             this.Controls.Add(this.textBoxModel);

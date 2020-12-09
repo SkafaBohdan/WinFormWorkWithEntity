@@ -126,5 +126,10 @@ namespace Laba_Entity
                 Body = p.TypesBodies.NameBody
             })).ToList();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
