@@ -1,37 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Laba_Entity
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         AppContext db = new AppContext();
-        public Form1()
+        public Main()
         {
             InitializeComponent();
-            dataGridView1.DataSource = (db.Avtos.Select(p => new
-            {
-                Id = p.Id,
-                ModelName = p.Model,
-                MarkaName = p.Marka,
-                ColorAvto = p.Color,
-                Doors = p.Count_Doors,
-                Engine = p.Engines.Type_Engine,
-                Body = p.TypesBodies.NameBody
-            })).ToList();
+            Refresh();
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             Form_Add form = new Form_Add();
+            form.buttonUpdate.Visible = false;
+            form.button1_Add.Visible = true;
             form.ShowDialog();
+            Refresh();
 
             //Engine engine = new Engine();
             //engine.EngineID = 1;
@@ -67,7 +56,7 @@ namespace Laba_Entity
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             int index = dataGridView1.SelectedRows[0].Index;
-            int id = 0;
+            int id;
             bool converted = Int32.TryParse(dataGridView1[0, index].Value.ToString(), out id);
             if (converted == false)
                 return;
@@ -84,6 +73,8 @@ namespace Laba_Entity
             edit.getEngine = avto.EngineID;
             edit.getBody = avto.Type_BodyID;
 
+            edit.buttonUpdate.Visible = true;
+            edit.button1_Add.Visible = false;
             edit.ShowDialog();
 
             avto.Model = edit.getModel;
@@ -95,8 +86,8 @@ namespace Laba_Entity
 
             db.SaveChanges();
             Refresh();
-        }
 
+        }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
@@ -127,9 +118,28 @@ namespace Laba_Entity
             })).ToList();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonEngine_Click(object sender, EventArgs e)
         {
+            Engine_Form engine = new Engine_Form();
+            engine.dataGridView_body.Visible = false;
+            engine.label_engine_body.Visible = false;
+            engine.button_body_add.Visible = false;
+            engine.button_body_edit.Visible = false;
+            engine.button_body_delete.Visible = false;
 
+            engine.ShowDialog();
+        }
+
+        private void buttonBody_Click(object sender, EventArgs e)
+        {
+            Engine_Form body = new Engine_Form();
+            body.dataGridView_engine.Visible = false;
+            body.label_engine_engine.Visible = false;
+            body.button_engine_add.Visible = false;
+            body.button_engine_edit.Visible = false;
+            body.button_engine_delete.Visible = false;
+
+            body.ShowDialog();
         }
     }
 }

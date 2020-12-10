@@ -83,13 +83,13 @@ namespace Laba_Entity
             set { comboBoxEngine.SelectedIndex = value - 1; }
         }
 
-        private void label4_Click(object sender, EventArgs e)
+
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void label4_Click_1(object sender, EventArgs e)
-        {
+            db.SaveChanges();
+            this.Close();
 
         }
     }

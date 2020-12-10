@@ -1,6 +1,6 @@
 ﻿namespace Laba_Entity
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -92,7 +92,7 @@
             this.buttonEngine.TabIndex = 5;
             this.buttonEngine.Text = "Двигателя";
             this.buttonEngine.UseVisualStyleBackColor = true;
-            this.buttonEngine.Click += new System.EventHandler(this.button1_Click);
+            this.buttonEngine.Click += new System.EventHandler(this.buttonEngine_Click);
             // 
             // buttonBody
             // 
@@ -102,8 +102,9 @@
             this.buttonBody.TabIndex = 6;
             this.buttonBody.Text = "Кузова";
             this.buttonBody.UseVisualStyleBackColor = true;
+            this.buttonBody.Click += new System.EventHandler(this.buttonBody_Click);
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -115,7 +116,7 @@
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

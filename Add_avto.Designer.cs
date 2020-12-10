@@ -42,6 +42,7 @@
             this.textBoxModel = new System.Windows.Forms.TextBox();
             this.labelCount = new System.Windows.Forms.Label();
             this.CountDoors = new System.Windows.Forms.NumericUpDown();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CountDoors)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,7 +125,6 @@
             this.label4Model.Size = new System.Drawing.Size(46, 13);
             this.label4Model.TabIndex = 12;
             this.label4Model.Text = "Модель";
-            this.label4Model.Click += new System.EventHandler(this.label4_Click);
             // 
             // label4Marka
             // 
@@ -157,7 +157,6 @@
             this.labelCount.Size = new System.Drawing.Size(105, 13);
             this.labelCount.TabIndex = 16;
             this.labelCount.Text = "Количетсво дверок";
-            this.labelCount.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // CountDoors
             // 
@@ -166,11 +165,22 @@
             this.CountDoors.Size = new System.Drawing.Size(110, 20);
             this.CountDoors.TabIndex = 17;
             // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.Location = new System.Drawing.Point(65, 335);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpdate.TabIndex = 18;
+            this.buttonUpdate.Text = "Update";
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
+            // 
             // Form_Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(320, 397);
+            this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.CountDoors);
             this.Controls.Add(this.labelCount);
             this.Controls.Add(this.textBoxModel);
@@ -200,7 +210,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxEngine;
         private System.Windows.Forms.ComboBox comboBoxBody;
-        private System.Windows.Forms.Button button1_Add;
         private System.Windows.Forms.Button button2_Cancel;
         private System.Windows.Forms.TextBox textBoxColor;
         private System.Windows.Forms.Label label4Model;
@@ -209,5 +218,7 @@
         private System.Windows.Forms.TextBox textBoxModel;
         private System.Windows.Forms.Label labelCount;
         private System.Windows.Forms.NumericUpDown CountDoors;
+        public System.Windows.Forms.Button button1_Add;
+        public System.Windows.Forms.Button buttonUpdate;
     }
 }
