@@ -72,7 +72,7 @@ namespace Laba_Entity
         {
             int index;
             try { index = dataGridView1.SelectedRows[0].Index; }
-            catch { index = 1; }
+            catch { index = 0; }
             
             int id;
             bool converted = Int32.TryParse(dataGridView1[0, index].Value.ToString(), out id);
