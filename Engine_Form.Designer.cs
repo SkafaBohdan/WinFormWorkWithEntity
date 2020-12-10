@@ -46,58 +46,58 @@
             // label_engine_engine
             // 
             this.label_engine_engine.AutoSize = true;
-            this.label_engine_engine.Location = new System.Drawing.Point(33, 133);
+            this.label_engine_engine.Location = new System.Drawing.Point(33, 9);
             this.label_engine_engine.Name = "label_engine_engine";
-            this.label_engine_engine.Size = new System.Drawing.Size(40, 13);
+            this.label_engine_engine.Size = new System.Drawing.Size(81, 13);
             this.label_engine_engine.TabIndex = 0;
-            this.label_engine_engine.Text = "Engine";
+            this.label_engine_engine.Text = "Тип двигателя";
             // 
             // label_engine_body
             // 
             this.label_engine_body.AutoSize = true;
             this.label_engine_body.Location = new System.Drawing.Point(33, 9);
             this.label_engine_body.Name = "label_engine_body";
-            this.label_engine_body.Size = new System.Drawing.Size(31, 13);
+            this.label_engine_body.Size = new System.Drawing.Size(64, 13);
             this.label_engine_body.TabIndex = 1;
-            this.label_engine_body.Text = "Body";
+            this.label_engine_body.Text = "Тип кузова";
             // 
             // button_engine_add
             // 
-            this.button_engine_add.Location = new System.Drawing.Point(275, 152);
+            this.button_engine_add.Location = new System.Drawing.Point(412, 36);
             this.button_engine_add.Name = "button_engine_add";
             this.button_engine_add.Size = new System.Drawing.Size(75, 23);
             this.button_engine_add.TabIndex = 4;
-            this.button_engine_add.Text = "engine_add";
+            this.button_engine_add.Text = "Добавить";
             this.button_engine_add.UseVisualStyleBackColor = true;
             this.button_engine_add.Click += new System.EventHandler(this.button_engine_add_Click);
             // 
             // button_engine_edit
             // 
-            this.button_engine_edit.Location = new System.Drawing.Point(367, 152);
+            this.button_engine_edit.Location = new System.Drawing.Point(412, 77);
             this.button_engine_edit.Name = "button_engine_edit";
             this.button_engine_edit.Size = new System.Drawing.Size(75, 23);
             this.button_engine_edit.TabIndex = 5;
-            this.button_engine_edit.Text = "engine_edit";
+            this.button_engine_edit.Text = "Изменить";
             this.button_engine_edit.UseVisualStyleBackColor = true;
             this.button_engine_edit.Click += new System.EventHandler(this.button_engine_edit_Click);
             // 
             // button_engine_delete
             // 
-            this.button_engine_delete.Location = new System.Drawing.Point(458, 152);
+            this.button_engine_delete.Location = new System.Drawing.Point(412, 121);
             this.button_engine_delete.Name = "button_engine_delete";
             this.button_engine_delete.Size = new System.Drawing.Size(75, 23);
             this.button_engine_delete.TabIndex = 6;
-            this.button_engine_delete.Text = "engine_delete";
+            this.button_engine_delete.Text = "Удалить";
             this.button_engine_delete.UseVisualStyleBackColor = true;
             this.button_engine_delete.Click += new System.EventHandler(this.button_engine_delete_Click);
             // 
             // button_close
             // 
-            this.button_close.Location = new System.Drawing.Point(36, 263);
+            this.button_close.Location = new System.Drawing.Point(412, 158);
             this.button_close.Name = "button_close";
             this.button_close.Size = new System.Drawing.Size(75, 23);
             this.button_close.TabIndex = 7;
-            this.button_close.Text = "Close";
+            this.button_close.Text = "Закрыть";
             this.button_close.UseVisualStyleBackColor = true;
             this.button_close.Click += new System.EventHandler(this.button_close_Click);
             // 
@@ -106,44 +106,44 @@
             this.dataGridView_body.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_body.Location = new System.Drawing.Point(12, 36);
             this.dataGridView_body.Name = "dataGridView_body";
-            this.dataGridView_body.Size = new System.Drawing.Size(257, 94);
+            this.dataGridView_body.Size = new System.Drawing.Size(382, 145);
             this.dataGridView_body.TabIndex = 8;
             // 
             // dataGridView_engine
             // 
             this.dataGridView_engine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_engine.Location = new System.Drawing.Point(12, 152);
+            this.dataGridView_engine.Location = new System.Drawing.Point(12, 36);
             this.dataGridView_engine.Name = "dataGridView_engine";
-            this.dataGridView_engine.Size = new System.Drawing.Size(257, 86);
+            this.dataGridView_engine.Size = new System.Drawing.Size(382, 145);
             this.dataGridView_engine.TabIndex = 9;
             // 
             // button_body_delete
             // 
-            this.button_body_delete.Location = new System.Drawing.Point(458, 36);
+            this.button_body_delete.Location = new System.Drawing.Point(412, 121);
             this.button_body_delete.Name = "button_body_delete";
             this.button_body_delete.Size = new System.Drawing.Size(75, 23);
             this.button_body_delete.TabIndex = 12;
-            this.button_body_delete.Text = "body_delete";
+            this.button_body_delete.Text = "Удалить";
             this.button_body_delete.UseVisualStyleBackColor = true;
             this.button_body_delete.Click += new System.EventHandler(this.button_body_delete_Click);
             // 
             // button_body_edit
             // 
-            this.button_body_edit.Location = new System.Drawing.Point(367, 36);
+            this.button_body_edit.Location = new System.Drawing.Point(412, 77);
             this.button_body_edit.Name = "button_body_edit";
             this.button_body_edit.Size = new System.Drawing.Size(75, 23);
             this.button_body_edit.TabIndex = 11;
-            this.button_body_edit.Text = "body_edit";
+            this.button_body_edit.Text = "Изменить";
             this.button_body_edit.UseVisualStyleBackColor = true;
             this.button_body_edit.Click += new System.EventHandler(this.button_body_edit_Click);
             // 
             // button_body_add
             // 
-            this.button_body_add.Location = new System.Drawing.Point(275, 36);
+            this.button_body_add.Location = new System.Drawing.Point(412, 36);
             this.button_body_add.Name = "button_body_add";
             this.button_body_add.Size = new System.Drawing.Size(75, 23);
             this.button_body_add.TabIndex = 10;
-            this.button_body_add.Text = "body_add";
+            this.button_body_add.Text = "Добавить";
             this.button_body_add.UseVisualStyleBackColor = true;
             this.button_body_add.Click += new System.EventHandler(this.button_body_add_Click);
             // 
@@ -151,7 +151,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 405);
+            this.ClientSize = new System.Drawing.Size(547, 230);
             this.Controls.Add(this.button_body_delete);
             this.Controls.Add(this.button_body_edit);
             this.Controls.Add(this.button_body_add);

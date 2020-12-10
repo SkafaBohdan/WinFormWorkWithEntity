@@ -11,9 +11,54 @@ namespace Laba_Entity
         public Main()
         {
             InitializeComponent();
+            add_data();
+
+            comboBoxFilter1.DataSource = (db.Type_Bodies.Select(p => new { p.Type_BodyID, p.NameBody })).ToList();
+            comboBoxFilter1.ValueMember = "Type_BodyID";
+            comboBoxFilter1.DisplayMember = "NameBody";
+
             Refresh();
         }
 
+        private void add_data()
+        {
+            if (db.Avtos.Any()) 
+            {
+                return;
+            }
+            else
+            {
+                Engine engine = new Engine();
+                engine.EngineID = 1;
+                engine.Type_Engine = "Дизель";
+                Engine engine1 = new Engine();
+                engine1.EngineID = 2;
+                engine1.Type_Engine = "Бензин";
+                Engine engine2 = new Engine();
+                engine2.EngineID = 3;
+                engine2.Type_Engine = "Газ";
+
+                Type_Body body = new Type_Body();
+                body.Type_BodyID = 1;
+                body.NameBody = "Пикап";
+                Type_Body body1 = new Type_Body();
+                body1.Type_BodyID = 2;
+                body1.NameBody = "Универсал";
+                Type_Body body2 = new Type_Body();
+                body2.Type_BodyID = 3;
+                body2.NameBody = "Седан";
+
+                db.Engines.Add(engine);
+                db.Engines.Add(engine1);
+                db.Engines.Add(engine2);
+
+                db.Type_Bodies.Add(body);
+                db.Type_Bodies.Add(body1);
+                db.Type_Bodies.Add(body2);
+
+                db.SaveChanges();
+            }
+        }
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             Form_Add form = new Form_Add();
@@ -21,41 +66,14 @@ namespace Laba_Entity
             form.button1_Add.Visible = true;
             form.ShowDialog();
             Refresh();
-
-            //Engine engine = new Engine();
-            //engine.EngineID = 1;
-            //engine.Type_Engine = "Дизель";
-            //Engine engine1 = new Engine();
-            //engine1.EngineID = 2;
-            //engine1.Type_Engine = "Бензин";
-            //Engine engine2 = new Engine();
-            //engine2.EngineID = 3;
-            //engine2.Type_Engine = "Газ";
-
-            //Type_Body body = new Type_Body();
-            //body.Type_BodyID = 1;
-            //body.NameBody = "Пикап";
-            //Type_Body body1 = new Type_Body();
-            //body1.Type_BodyID = 2;
-            //body1.NameBody = "Универсал";
-            //Type_Body body2 = new Type_Body();
-            //body2.Type_BodyID = 3;
-            //body2.NameBody = "Седан";
-
-            //db.Engines.Add(engine);
-            //db.Engines.Add(engine1);
-            //db.Engines.Add(engine2);
-
-            //db.Type_Bodies.Add(body);
-            //db.Type_Bodies.Add(body1);
-            //db.Type_Bodies.Add(body2);
-
-            //db.SaveChanges();
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            int index = dataGridView1.SelectedRows[0].Index;
+            int index;
+            try { index = dataGridView1.SelectedRows[0].Index; }
+            catch { index = 1; }
+            
             int id;
             bool converted = Int32.TryParse(dataGridView1[0, index].Value.ToString(), out id);
             if (converted == false)
@@ -140,6 +158,45 @@ namespace Laba_Entity
             body.button_engine_delete.Visible = false;
 
             body.ShowDialog();
+        }
+
+        private void buttonFilter_Click(object sender, EventArgs e)
+        {
+
+            int id;
+            bool result = int.TryParse(comboBoxFilter1.SelectedValue.ToString(), out id);
+
+            var data = (db.Avtos.Where(p => p.Type_BodyID == id).Select(p => new
+            {
+                p.Id,
+                p.Model,
+                p.Marka,
+                p.Color,
+                CountDoors = p.Count_Doors,
+                Engine = p.Engines.Type_Engine,
+                Body = p.TypesBodies.NameBody
+            })).ToList();
+            dataGridView1.DataSource = data;
+
+            if (textBoxFilter.Text.Length > 0 )
+            {
+                dataGridView1.DataSource = data.Where(p => p.Model.ToLower().StartsWith(textBoxFilter.Text.ToLower())).Select(p => new
+                {
+                    p.Id,
+                    p.Model,
+                    p.Marka,
+                    p.Color,
+                    p.CountDoors,
+                    p.Engine,
+                    p.Body
+                }).ToList();
+
+            }
+        }
+
+        private void buttonFilterCancel_Click(object sender, EventArgs e)
+        {
+            Refresh();
         }
     }
 }

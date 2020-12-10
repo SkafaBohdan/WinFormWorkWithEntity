@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Laba_Entity
@@ -51,7 +46,9 @@ namespace Laba_Entity
 
         private void button_engine_edit_Click(object sender, EventArgs e)
         {
-            int index = dataGridView_engine.SelectedRows[0].Index;
+            int index;
+            try { index = dataGridView_engine.SelectedRows[0].Index; }
+            catch { index = 1; }
             int id;
             bool converted = Int32.TryParse(dataGridView_engine[0, index].Value.ToString(), out id);
             if (converted == false)
@@ -65,7 +62,7 @@ namespace Laba_Entity
             edit.label_engine_add_body.Visible = false;
             edit.button_engine_add_add_body.Visible = false;
             edit.button_engine_add_edit_body.Visible = false;
-            edit.textBox_engine_add_body.Visible = true;
+            edit.textBox_engine_add_body.Visible = false;
             edit.button_engine_add_Add_eng.Visible = false;
 
             edit.ShowDialog();
@@ -106,7 +103,9 @@ namespace Laba_Entity
 
         private void button_body_edit_Click(object sender, EventArgs e)
         {
-            int index = dataGridView_body.SelectedRows[0].Index;
+            int index;
+            try { index = dataGridView_body.SelectedRows[0].Index; }
+            catch { index = 1; }
             int id;
             bool converted = Int32.TryParse(dataGridView_body[0, index].Value.ToString(), out id);
             if (converted == false)

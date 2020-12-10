@@ -49,7 +49,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 184);
+            this.label1.Location = new System.Drawing.Point(44, 147);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 13);
             this.label1.TabIndex = 0;
@@ -58,7 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 217);
+            this.label2.Location = new System.Drawing.Point(64, 180);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 1;
@@ -67,7 +67,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(64, 83);
+            this.label3.Location = new System.Drawing.Point(96, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 2;
@@ -76,7 +76,7 @@
             // comboBoxEngine
             // 
             this.comboBoxEngine.FormattingEnabled = true;
-            this.comboBoxEngine.Location = new System.Drawing.Point(123, 184);
+            this.comboBoxEngine.Location = new System.Drawing.Point(149, 147);
             this.comboBoxEngine.Name = "comboBoxEngine";
             this.comboBoxEngine.Size = new System.Drawing.Size(110, 21);
             this.comboBoxEngine.TabIndex = 6;
@@ -84,7 +84,7 @@
             // comboBoxBody
             // 
             this.comboBoxBody.FormattingEnabled = true;
-            this.comboBoxBody.Location = new System.Drawing.Point(123, 217);
+            this.comboBoxBody.Location = new System.Drawing.Point(149, 180);
             this.comboBoxBody.Name = "comboBoxBody";
             this.comboBoxBody.Size = new System.Drawing.Size(110, 21);
             this.comboBoxBody.TabIndex = 7;
@@ -92,27 +92,27 @@
             // button1_Add
             // 
             this.button1_Add.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button1_Add.Location = new System.Drawing.Point(65, 306);
+            this.button1_Add.Location = new System.Drawing.Point(85, 226);
             this.button1_Add.Name = "button1_Add";
             this.button1_Add.Size = new System.Drawing.Size(75, 23);
             this.button1_Add.TabIndex = 8;
-            this.button1_Add.Text = "Add";
+            this.button1_Add.Text = "Добавить";
             this.button1_Add.UseVisualStyleBackColor = true;
             this.button1_Add.Click += new System.EventHandler(this.button1_Add_Click);
             // 
             // button2_Cancel
             // 
-            this.button2_Cancel.Location = new System.Drawing.Point(158, 306);
+            this.button2_Cancel.Location = new System.Drawing.Point(184, 226);
             this.button2_Cancel.Name = "button2_Cancel";
             this.button2_Cancel.Size = new System.Drawing.Size(75, 23);
             this.button2_Cancel.TabIndex = 9;
-            this.button2_Cancel.Text = "Cancel";
+            this.button2_Cancel.Text = "Закрыть";
             this.button2_Cancel.UseVisualStyleBackColor = true;
             this.button2_Cancel.Click += new System.EventHandler(this.button2_Cancel_Click);
             // 
             // textBoxColor
             // 
-            this.textBoxColor.Location = new System.Drawing.Point(123, 80);
+            this.textBoxColor.Location = new System.Drawing.Point(149, 80);
             this.textBoxColor.Name = "textBoxColor";
             this.textBoxColor.Size = new System.Drawing.Size(100, 20);
             this.textBoxColor.TabIndex = 11;
@@ -120,7 +120,7 @@
             // label4Model
             // 
             this.label4Model.AutoSize = true;
-            this.label4Model.Location = new System.Drawing.Point(56, 12);
+            this.label4Model.Location = new System.Drawing.Point(82, 12);
             this.label4Model.Name = "label4Model";
             this.label4Model.Size = new System.Drawing.Size(46, 13);
             this.label4Model.TabIndex = 12;
@@ -129,7 +129,7 @@
             // label4Marka
             // 
             this.label4Marka.AutoSize = true;
-            this.label4Marka.Location = new System.Drawing.Point(62, 47);
+            this.label4Marka.Location = new System.Drawing.Point(88, 47);
             this.label4Marka.Name = "label4Marka";
             this.label4Marka.Size = new System.Drawing.Size(40, 13);
             this.label4Marka.TabIndex = 13;
@@ -137,14 +137,14 @@
             // 
             // textBoxMarka
             // 
-            this.textBoxMarka.Location = new System.Drawing.Point(123, 47);
+            this.textBoxMarka.Location = new System.Drawing.Point(149, 47);
             this.textBoxMarka.Name = "textBoxMarka";
             this.textBoxMarka.Size = new System.Drawing.Size(100, 20);
             this.textBoxMarka.TabIndex = 14;
             // 
             // textBoxModel
             // 
-            this.textBoxModel.Location = new System.Drawing.Point(123, 12);
+            this.textBoxModel.Location = new System.Drawing.Point(149, 12);
             this.textBoxModel.Name = "textBoxModel";
             this.textBoxModel.Size = new System.Drawing.Size(100, 20);
             this.textBoxModel.TabIndex = 15;
@@ -152,7 +152,7 @@
             // labelCount
             // 
             this.labelCount.AutoSize = true;
-            this.labelCount.Location = new System.Drawing.Point(12, 137);
+            this.labelCount.Location = new System.Drawing.Point(23, 112);
             this.labelCount.Name = "labelCount";
             this.labelCount.Size = new System.Drawing.Size(105, 13);
             this.labelCount.TabIndex = 16;
@@ -160,18 +160,18 @@
             // 
             // CountDoors
             // 
-            this.CountDoors.Location = new System.Drawing.Point(123, 137);
+            this.CountDoors.Location = new System.Drawing.Point(149, 112);
             this.CountDoors.Name = "CountDoors";
             this.CountDoors.Size = new System.Drawing.Size(110, 20);
             this.CountDoors.TabIndex = 17;
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Location = new System.Drawing.Point(65, 335);
+            this.buttonUpdate.Location = new System.Drawing.Point(85, 226);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
             this.buttonUpdate.TabIndex = 18;
-            this.buttonUpdate.Text = "Update";
+            this.buttonUpdate.Text = "Сохранить";
             this.buttonUpdate.UseVisualStyleBackColor = true;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
@@ -179,7 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(320, 397);
+            this.ClientSize = new System.Drawing.Size(336, 291);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.CountDoors);
             this.Controls.Add(this.labelCount);
