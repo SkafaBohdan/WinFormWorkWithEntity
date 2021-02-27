@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 
 namespace Laba_Entity
 {
     class Avto
     {
-    //    [NotMapped]
+        [Required]
         public int Id { get; set; }
-    //    [Required]
+        [Required]
         public string Model { get; set; }
-    //    [Required]
+        [Required]
         public string Marka { get; set; }
         public string Color { get; set; }
         public int Count_Doors { get; set; }

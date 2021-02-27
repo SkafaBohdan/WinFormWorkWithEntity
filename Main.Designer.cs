@@ -48,12 +48,12 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(21, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(638, 217);
+            this.dataGridView1.Size = new System.Drawing.Size(752, 220);
             this.dataGridView1.TabIndex = 0;
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(665, 12);
+            this.buttonAdd.Location = new System.Drawing.Point(779, 14);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(102, 23);
             this.buttonAdd.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(665, 41);
+            this.buttonEdit.Location = new System.Drawing.Point(779, 43);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(102, 23);
             this.buttonEdit.TabIndex = 2;
@@ -73,7 +73,7 @@
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(665, 70);
+            this.buttonDelete.Location = new System.Drawing.Point(779, 72);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(102, 21);
             this.buttonDelete.TabIndex = 3;
@@ -84,14 +84,14 @@
             // comboBoxFilter1
             // 
             this.comboBoxFilter1.FormattingEnabled = true;
-            this.comboBoxFilter1.Location = new System.Drawing.Point(776, 28);
+            this.comboBoxFilter1.Location = new System.Drawing.Point(890, 30);
             this.comboBoxFilter1.Name = "comboBoxFilter1";
             this.comboBoxFilter1.Size = new System.Drawing.Size(121, 21);
             this.comboBoxFilter1.TabIndex = 4;
             // 
             // buttonEngine
             // 
-            this.buttonEngine.Location = new System.Drawing.Point(665, 122);
+            this.buttonEngine.Location = new System.Drawing.Point(779, 124);
             this.buttonEngine.Name = "buttonEngine";
             this.buttonEngine.Size = new System.Drawing.Size(102, 22);
             this.buttonEngine.TabIndex = 5;
@@ -101,7 +101,7 @@
             // 
             // buttonBody
             // 
-            this.buttonBody.Location = new System.Drawing.Point(665, 152);
+            this.buttonBody.Location = new System.Drawing.Point(779, 154);
             this.buttonBody.Name = "buttonBody";
             this.buttonBody.Size = new System.Drawing.Size(102, 22);
             this.buttonBody.TabIndex = 6;
@@ -111,14 +111,14 @@
             // 
             // textBoxFilter
             // 
-            this.textBoxFilter.Location = new System.Drawing.Point(776, 82);
+            this.textBoxFilter.Location = new System.Drawing.Point(890, 84);
             this.textBoxFilter.Name = "textBoxFilter";
             this.textBoxFilter.Size = new System.Drawing.Size(118, 20);
             this.textBoxFilter.TabIndex = 7;
             // 
             // buttonFilter
             // 
-            this.buttonFilter.Location = new System.Drawing.Point(776, 122);
+            this.buttonFilter.Location = new System.Drawing.Point(890, 124);
             this.buttonFilter.Name = "buttonFilter";
             this.buttonFilter.Size = new System.Drawing.Size(118, 22);
             this.buttonFilter.TabIndex = 8;
@@ -129,7 +129,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(773, 9);
+            this.label1.Location = new System.Drawing.Point(887, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 13);
             this.label1.TabIndex = 9;
@@ -138,7 +138,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(773, 66);
+            this.label2.Location = new System.Drawing.Point(887, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 13);
             this.label2.TabIndex = 10;
@@ -146,7 +146,7 @@
             // 
             // buttonFilterCancel
             // 
-            this.buttonFilterCancel.Location = new System.Drawing.Point(776, 152);
+            this.buttonFilterCancel.Location = new System.Drawing.Point(890, 154);
             this.buttonFilterCancel.Name = "buttonFilterCancel";
             this.buttonFilterCancel.Size = new System.Drawing.Size(118, 22);
             this.buttonFilterCancel.TabIndex = 11;
@@ -158,7 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 279);
+            this.ClientSize = new System.Drawing.Size(1038, 289);
             this.Controls.Add(this.buttonFilterCancel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

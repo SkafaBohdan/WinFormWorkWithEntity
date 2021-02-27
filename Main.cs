@@ -10,9 +10,9 @@ namespace Laba_Entity
         AppContext db = new AppContext();
         public Main()
         {
-            InitializeComponent();
             add_data();
-
+            InitializeComponent();
+ 
             comboBoxFilter1.DataSource = (db.Type_Bodies.Select(p => new { p.Type_BodyID, p.NameBody })).ToList();
             comboBoxFilter1.ValueMember = "Type_BodyID";
             comboBoxFilter1.DisplayMember = "NameBody";
@@ -48,6 +48,14 @@ namespace Laba_Entity
                 body2.Type_BodyID = 3;
                 body2.NameBody = "Седан";
 
+                Avto avto = new Avto();
+                avto.Model = "Opel";
+                avto.Marka = "Turbo";
+                avto.Color = "Gold";
+                avto.Count_Doors = 2;
+                avto.Type_BodyID = 3;
+                avto.EngineID = 1;
+
                 db.Engines.Add(engine);
                 db.Engines.Add(engine1);
                 db.Engines.Add(engine2);
@@ -56,9 +64,12 @@ namespace Laba_Entity
                 db.Type_Bodies.Add(body1);
                 db.Type_Bodies.Add(body2);
 
+                db.Avtos.Add(avto);
+
                 db.SaveChanges();
             }
         }
+
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             Form_Add form = new Form_Add();
@@ -109,31 +120,20 @@ namespace Laba_Entity
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            int index = dataGridView1.SelectedRows[0].Index;
-            int id = 0;
-            bool converted = Int32.TryParse(dataGridView1[0, index].Value.ToString(), out id);
-            if (converted == false)
-                return;
-
-            Avto avto = db.Avtos.Find(id);
-            db.Avtos.Remove(avto);
-
-            db.SaveChanges();
-            Refresh();
-        }
-
-        private void Refresh()
-        {
-            dataGridView1.DataSource = (db.Avtos.Select(p => new
+            if (dataGridView1.SelectedRows[0].Index > 0)
             {
-                Id = p.Id,
-                ModelName = p.Model,
-                MarkaName = p.Marka,
-                ColorAvto = p.Color,
-                Doors = p.Count_Doors,
-                Engine = p.Engines.Type_Engine,
-                Body = p.TypesBodies.NameBody
-            })).ToList();
+                int index = dataGridView1.SelectedRows[0].Index;
+                int id = 0;
+                bool converted = Int32.TryParse(dataGridView1[0, index].Value.ToString(), out id);
+                if (converted == false)
+                    return;
+
+                Avto avto = db.Avtos.Find(id);
+                db.Avtos.Remove(avto);
+
+                db.SaveChanges();
+                Refresh();
+            }
         }
 
         private void buttonEngine_Click(object sender, EventArgs e)
@@ -197,6 +197,19 @@ namespace Laba_Entity
         private void buttonFilterCancel_Click(object sender, EventArgs e)
         {
             Refresh();
+        }
+        private void Refresh()
+        {
+            dataGridView1.DataSource = (db.Avtos.Select(p => new
+            {
+                p.Id,
+                p.Model,
+                p.Marka,
+                p.Color,
+                CountDoors = p.Count_Doors,
+                Engine = p.Engines.Type_Engine,
+                Body = p.TypesBodies.NameBody
+            })).ToList();
         }
     }
 }

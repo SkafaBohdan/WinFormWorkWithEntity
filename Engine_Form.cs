@@ -20,7 +20,7 @@ namespace Laba_Entity
             dataGridView_body.DataSource = (db.Type_Bodies.Select(p => new
             {
                 Id = p.Type_BodyID,
-                BodyName = p.NameBody
+                Body = p.NameBody
             })).ToList();
         }
         public void Refresh_Engine()
@@ -28,7 +28,7 @@ namespace Laba_Entity
             dataGridView_engine.DataSource = (db.Engines.Select(p => new
             {
                 Id = p.EngineID,
-                BodyName = p.Type_Engine
+                Engine = p.Type_Engine
             })).ToList();
         }
         private void button_engine_add_Click(object sender, EventArgs e)
@@ -75,17 +75,20 @@ namespace Laba_Entity
 
         private void button_engine_delete_Click(object sender, EventArgs e)
         {
-            int index = dataGridView_engine.SelectedRows[0].Index;
-            int id = 0;
-            bool converted = Int32.TryParse(dataGridView_engine[0, index].Value.ToString(), out id);
-            if (converted == false)
-                return;
+            if (dataGridView_engine.SelectedRows[0].Index > 0)
+            {
+                int index = dataGridView_engine.SelectedRows[0].Index;
+                int id = 0;
+                bool converted = Int32.TryParse(dataGridView_engine[0, index].Value.ToString(), out id);
+                if (converted == false)
+                    return;
 
-            Engine engine = db.Engines.Find(id);
-            db.Engines.Remove(engine);
+                Engine engine = db.Engines.Find(id);
+                db.Engines.Remove(engine);
 
-            db.SaveChanges();
-            Refresh_Engine();
+                db.SaveChanges();
+                Refresh_Engine();
+            }
         }
 
         private void button_body_add_Click(object sender, EventArgs e)
@@ -132,17 +135,20 @@ namespace Laba_Entity
 
         private void button_body_delete_Click(object sender, EventArgs e)
         {
-            int index = dataGridView_body.SelectedRows[0].Index;
-            int id = 0;
-            bool converted = Int32.TryParse(dataGridView_body[0, index].Value.ToString(), out id);
-            if (converted == false)
-                return;
+            if (dataGridView_engine.SelectedRows[0].Index > 0)
+            {
+                int index = dataGridView_body.SelectedRows[0].Index;
+                int id = 0;
+                bool converted = Int32.TryParse(dataGridView_body[0, index].Value.ToString(), out id);
+                if (converted == false)
+                    return;
 
-            Type_Body body = db.Type_Bodies.Find(id);
-            db.Type_Bodies.Remove(body);
+                Type_Body body = db.Type_Bodies.Find(id);
+                db.Type_Bodies.Remove(body);
 
-            db.SaveChanges();
-            Refresh_Body();
+                db.SaveChanges();
+                Refresh_Body();
+            }
         }
 
         private void button_close_Click(object sender, EventArgs e)
